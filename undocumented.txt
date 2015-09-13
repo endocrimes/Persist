@@ -1,0 +1,10 @@
+NSManagedObject+Helpers.swift
+	public static func entityName() -> String
+	public static func create(inContext context: NSManagedObjectContext) -> Self?
+	public static func fetchRequest() -> NSFetchRequest
+	public static func findAllMatchingPredicate(predicate: NSPredicate, inContext context: NSManagedObjectContext) throws -> [Self]
+Persist.swift
+	case InMemory
+	case SQLite(url: NSURL, configuration: CoreDataConfigurationType?, options: CoreDataOptionsType?)
+	case Binary(url: NSURL, configuration: CoreDataConfigurationType?, options: CoreDataOptionsType?)
+	case Custom(typeName: String, url: NSURL?, configuration: CoreDataConfigurationType?, options: CoreDataOptionsType?)

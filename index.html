@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (65% documented)</p>
+        <p class="header-right"><a href="https://github.com/DanielTomlinson/Persist"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+          <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Persist.html">Persist</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+          <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/StoreType.html">StoreType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+          <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/ManagedObjectType.html">ManagedObjectType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Persist.html">Persist</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+          <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ManagedObjectType.html">ManagedObjectType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+          <a href="Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:7Persist25CoreDataConfigurationType">CoreDataConfigurationType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:7Persist19CoreDataOptionsType">CoreDataOptionsType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#persist' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='persist'>Persist</h1>
+
+<p>Persist is a simple, reusable Core Data stack written in Swift.
+It also provides some lightweight helpers for common actions such as creating
+entities, and querying.</p>
+
+<p>It supports iOS 8+, watchOS 2.0, and Mac OS 10.9+.</p>
+<a href='#architecture' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='architecture'> Architecture</h2>
+
+<p>Persist uses a simple parent/child Core Data stack, with a private writer
+context attached directly to the NSPersistentStoreCoordinator, with a main
+queue context that is exposed to the user as it&rsquo;s child.</p>
+<pre class="highlight plaintext"><code>   ┌─────────────────────────────────────────────────────────────────────────┐
+   │ ┌─────────────────────────────────┐                                     │
+   │ │  Persistent Store Coordinator   │                                     │
+   │ └────────────────┬────────────────┘                                     │
+   │                  │                                                      │
+   │                  │                                                      │
+   │ ┌────────────────▼────────────────┐                                     │
+   │ │      Private Queue Context      │                                     │
+   │ └────────────────┬────────────────┘                                     │
+   │                  │                                                      │
+   │                  │                                                      │
+   │ ┌────────────────▼────────────────┐         ┌─────────────────┐         │
+   │ │       Main Queue Context        ├─────────▶  User Interface │         │
+   │ └────────────────┬────────────────┘         └─────────────────┘         │
+   │                  │                                                      │
+   │                  │                                                      │
+   │                  │                                                      │
+   │                  │                                                      │
+   │                  │                                                      │
+   │ ┌────────────────▼────────────────┐         ┌────────────────────────┐  │
+   │ │ Temporary Private Queue Context ◀─────────┤     Writes/Updates     │  │
+   │ └─────────────────────────────────┘         └────────────────────────┘  │
+   └─────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'> Usage</h2>
+<a href='#stack_setup' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='stack_setup'>Stack setup</h3>
+
+<p>Persist gives you full access to the configuration of it&rsquo;s underlying stores
+via the StoreType enum, providing safe construction of InMemory, SQLite, and
+Binary store types, and allows you to also provide a custom store type.</p>
+
+<p>Creating an in memory store would look like this:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Persist</span>
+
+<span class="k">let</span> <span class="nv">bundle</span> <span class="o">=</span> <span class="kt">NSBundle</span><span class="o">.</span><span class="nf">mainBundle</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">modelPath</span> <span class="o">=</span> <span class="n">bundle</span><span class="o">.</span><span class="nf">pathForResource</span><span class="p">(</span><span class="s">"MyModel"</span><span class="p">,</span> <span class="nv">ofType</span><span class="p">:</span> <span class="s">"momd"</span><span class="p">)</span><span class="o">!</span>
+<span class="k">let</span> <span class="nv">modelURL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">fileURLWithPath</span><span class="p">:</span> <span class="n">modelPath</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">persist</span> <span class="o">=</span> <span class="k">try!</span> <span class="kt">Persist</span><span class="p">(</span><span class="nv">storeType</span><span class="p">:</span> <span class="o">.</span><span class="kt">InMemory</span><span class="p">,</span> <span class="nv">modelURL</span><span class="p">:</span> <span class="n">modelURL</span><span class="p">)</span>
+</code></pre>
+
+<p>You can see more examples in PersistTests/PersistStoreBasedTests.swift</p>
+<a href='#helpers' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='helpers'>Helpers</h3>
+
+<p>To opt your NSManagedObject subclasses into the helpers, annotate them with the
+ManagedObjectType protocol like so:</p>
+<pre class="highlight swift"><code><span class="kd">@objc(Person)</span>
+<span class="kd">class</span> <span class="kt">Person</span><span class="p">:</span> <span class="kt">ManagedObjectType</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>If you don&rsquo;t provide an objective-c name for your class, or update your model
+configuration to support module namespaces, you will need to provide your own
+implementation of <code>static func entityName() -&gt; String</code>.</p>
+<a href='#adding_to_your_project' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='adding_to_your_project'>Adding to your project:</h2>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage:</h3>
+
+<ol>
+<li>Add <code>github &quot;DanielTomlinson/Persist&quot;</code> to your Cartfile</li>
+<li>Run <code>$ carthage update</code></li>
+<li>Add the frameworks to your project.</li>
+</ol>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>Cocoapods:</h3>
+
+<ol>
+<li>Add <code>pod &quot;Persist&quot;</code> to your podfile</li>
+<li>Run <code>$ pod install</code></li>
+</ol>
+<a href='#contributing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing'>Contributing</h2>
+<a href='#issues' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='issues'>Issues</h3>
+
+<p>Issues and feature requests are welcome, although the intention is to keep Latch lightweight.</p>
+<a href='#submitting_pull_requests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='submitting_pull_requests'>Submitting Pull Requests</h3>
+
+<ol>
+<li>Fork it ( <a href="http://github.com/DanielTomlinson/Latch/fork">http://github.com/DanielTomlinson/Latch/fork</a> )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am &#39;Add some feature&#39;</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2015 <a class="link" href="http://dantoml.com" target="_blank" rel="external">Daniel</a>. All rights reserved. (Last updated: 2015-09-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.3.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
