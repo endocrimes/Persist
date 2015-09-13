@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		651860711BA56DD10079B39F /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860701BA56DD10079B39F /* Internal.swift */; settings = {ASSET_TAGS = (); }; };
+		651860761BA578F00079B39F /* SimpleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 651860741BA578F00079B39F /* SimpleModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		651860791BA579B00079B39F /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860771BA579B00079B39F /* Person+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		6518607A1BA579B00079B39F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860781BA579B00079B39F /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		6518607C1BA57FA60079B39F /* NSManagedObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518607B1BA57FA60079B39F /* NSManagedObject+Helpers.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D101BA5A94C0072AC48 /* Persist+SavingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C04D0F1BA5A94C0072AC48 /* Persist+SavingExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D361BA5B0910072AC48 /* Persist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C04D2C1BA5B0900072AC48 /* Persist.framework */; settings = {ASSET_TAGS = (); }; };
+		65C04D431BA5B0D80072AC48 /* PersistStoreBasedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F1BE1BA5672B00AF94FE /* PersistStoreBasedTests.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D441BA5B0D80072AC48 /* PersistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F4461BA5852E0038C449 /* PersistTests.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D451BA5B0D80072AC48 /* PersistNSMOExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F4481BA585430038C449 /* PersistNSMOExtensionsTests.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D461BA5B0DC0072AC48 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860771BA579B00079B39F /* Person+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D471BA5B0DC0072AC48 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860781BA579B00079B39F /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D481BA5B0DC0072AC48 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F44A1BA585630038C449 /* Helpers.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D4A1BA5B0E00072AC48 /* SimpleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 651860741BA578F00079B39F /* SimpleModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		65C04D4B1BA5B0E70072AC48 /* Persist.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E7F1B21BA5672B00AF94FE /* Persist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C04D4C1BA5B0E70072AC48 /* Persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F1C91BA5673300AF94FE /* Persist.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D4D1BA5B0E70072AC48 /* Persist+SavingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C04D0F1BA5A94C0072AC48 /* Persist+SavingExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D4E1BA5B0E70072AC48 /* NSManagedObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518607B1BA57FA60079B39F /* NSManagedObject+Helpers.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D4F1BA5B0E70072AC48 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860701BA56DD10079B39F /* Internal.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D5D1BA5B4670072AC48 /* Persist.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E7F1B21BA5672B00AF94FE /* Persist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C04D5E1BA5B4670072AC48 /* Persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F1C91BA5673300AF94FE /* Persist.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D5F1BA5B4670072AC48 /* Persist+SavingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C04D0F1BA5A94C0072AC48 /* Persist+SavingExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D601BA5B4670072AC48 /* NSManagedObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518607B1BA57FA60079B39F /* NSManagedObject+Helpers.swift */; settings = {ASSET_TAGS = (); }; };
+		65C04D611BA5B4670072AC48 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651860701BA56DD10079B39F /* Internal.swift */; settings = {ASSET_TAGS = (); }; };
+		65E7F1B31BA5672B00AF94FE /* Persist.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E7F1B21BA5672B00AF94FE /* Persist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E7F1BA1BA5672B00AF94FE /* Persist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E7F1AF1BA5672B00AF94FE /* Persist.framework */; settings = {ASSET_TAGS = (); }; };
+		65E7F1BF1BA5672B00AF94FE /* PersistStoreBasedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F1BE1BA5672B00AF94FE /* PersistStoreBasedTests.swift */; };
+		65E7F1CA1BA5673300AF94FE /* Persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F1C91BA5673300AF94FE /* Persist.swift */; settings = {ASSET_TAGS = (); }; };
+		65E7F4471BA5852E0038C449 /* PersistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F4461BA5852E0038C449 /* PersistTests.swift */; settings = {ASSET_TAGS = (); }; };
+		65E7F4491BA585430038C449 /* PersistNSMOExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F4481BA585430038C449 /* PersistNSMOExtensionsTests.swift */; settings = {ASSET_TAGS = (); }; };
+		65E7F44B1BA585630038C449 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E7F44A1BA585630038C449 /* Helpers.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65C04D371BA5B0910072AC48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65E7F1A61BA5672B00AF94FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65C04D2B1BA5B0900072AC48;
+			remoteInfo = "Persist-OSX";
+		};
+		65E7F1BB1BA5672B00AF94FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65E7F1A61BA5672B00AF94FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65E7F1AE1BA5672B00AF94FE;
+			remoteInfo = Persist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		651860701BA56DD10079B39F /* Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
+		651860751BA578F00079B39F /* SimpleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleModel.xcdatamodel; sourceTree = "<group>"; };
+		651860771BA579B00079B39F /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		651860781BA579B00079B39F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6518607B1BA57FA60079B39F /* NSManagedObject+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Helpers.swift"; sourceTree = "<group>"; };
+		65C04D0F1BA5A94C0072AC48 /* Persist+SavingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Persist+SavingExtensions.swift"; sourceTree = "<group>"; };
+		65C04D131BA5AEFC0072AC48 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		65C04D141BA5AEFC0072AC48 /* iOS Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS Framework.xcconfig"; sourceTree = "<group>"; };
+		65C04D151BA5AEFC0072AC48 /* iOS Static Library.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS Static Library.xcconfig"; sourceTree = "<group>"; };
+		65C04D161BA5AEFC0072AC48 /* iOS Tests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS Tests.xcconfig"; sourceTree = "<group>"; };
+		65C04D171BA5AEFC0072AC48 /* OSX Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "OSX Framework.xcconfig"; sourceTree = "<group>"; };
+		65C04D181BA5AEFC0072AC48 /* OSX Tests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "OSX Tests.xcconfig"; sourceTree = "<group>"; };
+		65C04D191BA5AEFC0072AC48 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		65C04D1A1BA5AEFC0072AC48 /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		65C04D1B1BA5AEFC0072AC48 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		65C04D1C1BA5AEFC0072AC48 /* watchOS Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "watchOS Framework.xcconfig"; sourceTree = "<group>"; };
+		65C04D2C1BA5B0900072AC48 /* Persist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C04D351BA5B0910072AC48 /* Persist-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Persist-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C04D551BA5B4580072AC48 /* Persist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7F1AF1BA5672B00AF94FE /* Persist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7F1B21BA5672B00AF94FE /* Persist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persist.h; sourceTree = "<group>"; };
+		65E7F1B41BA5672B00AF94FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E7F1B91BA5672B00AF94FE /* PersistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E7F1BE1BA5672B00AF94FE /* PersistStoreBasedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistStoreBasedTests.swift; sourceTree = "<group>"; };
+		65E7F1C01BA5672B00AF94FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E7F1C91BA5673300AF94FE /* Persist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persist.swift; sourceTree = "<group>"; };
+		65E7F4461BA5852E0038C449 /* PersistTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistTests.swift; sourceTree = "<group>"; };
+		65E7F4481BA585430038C449 /* PersistNSMOExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistNSMOExtensionsTests.swift; sourceTree = "<group>"; };
+		65E7F44A1BA585630038C449 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65C04D281BA5B0900072AC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D321BA5B0910072AC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C04D361BA5B0910072AC48 /* Persist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D511BA5B4580072AC48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1AB1BA5672B00AF94FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1B61BA5672B00AF94FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7F1BA1BA5672B00AF94FE /* Persist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		651860721BA578D50079B39F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				651860771BA579B00079B39F /* Person+CoreDataProperties.swift */,
+				651860781BA579B00079B39F /* Person.swift */,
+				65E7F44A1BA585630038C449 /* Helpers.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		651860731BA578DF0079B39F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				651860741BA578F00079B39F /* SimpleModel.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		65C04D111BA5AEFC0072AC48 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				65C04D121BA5AEFC0072AC48 /* xcconfigs */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		65C04D121BA5AEFC0072AC48 /* xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				65C04D131BA5AEFC0072AC48 /* Debug.xcconfig */,
+				65C04D141BA5AEFC0072AC48 /* iOS Framework.xcconfig */,
+				65C04D151BA5AEFC0072AC48 /* iOS Static Library.xcconfig */,
+				65C04D161BA5AEFC0072AC48 /* iOS Tests.xcconfig */,
+				65C04D171BA5AEFC0072AC48 /* OSX Framework.xcconfig */,
+				65C04D181BA5AEFC0072AC48 /* OSX Tests.xcconfig */,
+				65C04D191BA5AEFC0072AC48 /* Release.xcconfig */,
+				65C04D1A1BA5AEFC0072AC48 /* Shared.xcconfig */,
+				65C04D1B1BA5AEFC0072AC48 /* Warnings.xcconfig */,
+				65C04D1C1BA5AEFC0072AC48 /* watchOS Framework.xcconfig */,
+			);
+			path = xcconfigs;
+			sourceTree = "<group>";
+		};
+		65E7F1A51BA5672B00AF94FE = {
+			isa = PBXGroup;
+			children = (
+				65C04D111BA5AEFC0072AC48 /* External */,
+				65E7F1B11BA5672B00AF94FE /* Persist */,
+				65E7F1BD1BA5672B00AF94FE /* PersistTests */,
+				65E7F1B01BA5672B00AF94FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65E7F1B01BA5672B00AF94FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65E7F1AF1BA5672B00AF94FE /* Persist.framework */,
+				65E7F1B91BA5672B00AF94FE /* PersistTests.xctest */,
+				65C04D2C1BA5B0900072AC48 /* Persist.framework */,
+				65C04D351BA5B0910072AC48 /* Persist-OSXTests.xctest */,
+				65C04D551BA5B4580072AC48 /* Persist.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65E7F1B11BA5672B00AF94FE /* Persist */ = {
+			isa = PBXGroup;
+			children = (
+				65E7F1B21BA5672B00AF94FE /* Persist.h */,
+				65E7F1C91BA5673300AF94FE /* Persist.swift */,
+				65C04D0F1BA5A94C0072AC48 /* Persist+SavingExtensions.swift */,
+				6518607B1BA57FA60079B39F /* NSManagedObject+Helpers.swift */,
+				651860701BA56DD10079B39F /* Internal.swift */,
+				65E7F1B41BA5672B00AF94FE /* Info.plist */,
+			);
+			path = Persist;
+			sourceTree = "<group>";
+		};
+		65E7F1BD1BA5672B00AF94FE /* PersistTests */ = {
+			isa = PBXGroup;
+			children = (
+				651860731BA578DF0079B39F /* Models */,
+				651860721BA578D50079B39F /* Classes */,
+				65E7F1BE1BA5672B00AF94FE /* PersistStoreBasedTests.swift */,
+				65E7F4461BA5852E0038C449 /* PersistTests.swift */,
+				65E7F4481BA585430038C449 /* PersistNSMOExtensionsTests.swift */,
+				65E7F1C01BA5672B00AF94FE /* Info.plist */,
+			);
+			path = PersistTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		65C04D291BA5B0900072AC48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C04D4B1BA5B0E70072AC48 /* Persist.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D521BA5B4580072AC48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C04D5D1BA5B4670072AC48 /* Persist.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1AC1BA5672B00AF94FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7F1B31BA5672B00AF94FE /* Persist.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		65C04D2B1BA5B0900072AC48 /* Persist-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C04D3D1BA5B0910072AC48 /* Build configuration list for PBXNativeTarget "Persist-OSX" */;
+			buildPhases = (
+				65C04D271BA5B0900072AC48 /* Sources */,
+				65C04D281BA5B0900072AC48 /* Frameworks */,
+				65C04D291BA5B0900072AC48 /* Headers */,
+				65C04D2A1BA5B0900072AC48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Persist-OSX";
+			productName = "Persist-OSX";
+			productReference = 65C04D2C1BA5B0900072AC48 /* Persist.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65C04D341BA5B0910072AC48 /* Persist-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C04D401BA5B0910072AC48 /* Build configuration list for PBXNativeTarget "Persist-OSXTests" */;
+			buildPhases = (
+				65C04D311BA5B0910072AC48 /* Sources */,
+				65C04D321BA5B0910072AC48 /* Frameworks */,
+				65C04D331BA5B0910072AC48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65C04D381BA5B0910072AC48 /* PBXTargetDependency */,
+			);
+			name = "Persist-OSXTests";
+			productName = "Persist-OSXTests";
+			productReference = 65C04D351BA5B0910072AC48 /* Persist-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65C04D541BA5B4580072AC48 /* Persist-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C04D5A1BA5B4580072AC48 /* Build configuration list for PBXNativeTarget "Persist-watchOS" */;
+			buildPhases = (
+				65C04D501BA5B4580072AC48 /* Sources */,
+				65C04D511BA5B4580072AC48 /* Frameworks */,
+				65C04D521BA5B4580072AC48 /* Headers */,
+				65C04D531BA5B4580072AC48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Persist-watchOS";
+			productName = "Persist-watchOS";
+			productReference = 65C04D551BA5B4580072AC48 /* Persist.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65E7F1AE1BA5672B00AF94FE /* Persist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E7F1C31BA5672B00AF94FE /* Build configuration list for PBXNativeTarget "Persist" */;
+			buildPhases = (
+				65E7F1AA1BA5672B00AF94FE /* Sources */,
+				65E7F1AB1BA5672B00AF94FE /* Frameworks */,
+				65E7F1AC1BA5672B00AF94FE /* Headers */,
+				65E7F1AD1BA5672B00AF94FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Persist;
+			productName = Persist;
+			productReference = 65E7F1AF1BA5672B00AF94FE /* Persist.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65E7F1B81BA5672B00AF94FE /* PersistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E7F1C61BA5672B00AF94FE /* Build configuration list for PBXNativeTarget "PersistTests" */;
+			buildPhases = (
+				65E7F1B51BA5672B00AF94FE /* Sources */,
+				65E7F1B61BA5672B00AF94FE /* Frameworks */,
+				65E7F1B71BA5672B00AF94FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65E7F1BC1BA5672B00AF94FE /* PBXTargetDependency */,
+			);
+			name = PersistTests;
+			productName = PersistTests;
+			productReference = 65E7F1B91BA5672B00AF94FE /* PersistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65E7F1A61BA5672B00AF94FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Danielle Lancashire";
+				TargetAttributes = {
+					65C04D2B1BA5B0900072AC48 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					65C04D341BA5B0910072AC48 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					65C04D541BA5B4580072AC48 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					65E7F1AE1BA5672B00AF94FE = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					65E7F1B81BA5672B00AF94FE = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 65E7F1A91BA5672B00AF94FE /* Build configuration list for PBXProject "Persist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 65E7F1A51BA5672B00AF94FE;
+			productRefGroup = 65E7F1B01BA5672B00AF94FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65E7F1AE1BA5672B00AF94FE /* Persist */,
+				65E7F1B81BA5672B00AF94FE /* PersistTests */,
+				65C04D2B1BA5B0900072AC48 /* Persist-OSX */,
+				65C04D341BA5B0910072AC48 /* Persist-OSXTests */,
+				65C04D541BA5B4580072AC48 /* Persist-watchOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65C04D2A1BA5B0900072AC48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D331BA5B0910072AC48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D531BA5B4580072AC48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1AD1BA5672B00AF94FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1B71BA5672B00AF94FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65C04D271BA5B0900072AC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C04D4D1BA5B0E70072AC48 /* Persist+SavingExtensions.swift in Sources */,
+				65C04D4E1BA5B0E70072AC48 /* NSManagedObject+Helpers.swift in Sources */,
+				65C04D4F1BA5B0E70072AC48 /* Internal.swift in Sources */,
+				65C04D4C1BA5B0E70072AC48 /* Persist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D311BA5B0910072AC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C04D471BA5B0DC0072AC48 /* Person.swift in Sources */,
+				65C04D481BA5B0DC0072AC48 /* Helpers.swift in Sources */,
+				65C04D461BA5B0DC0072AC48 /* Person+CoreDataProperties.swift in Sources */,
+				65C04D441BA5B0D80072AC48 /* PersistTests.swift in Sources */,
+				65C04D4A1BA5B0E00072AC48 /* SimpleModel.xcdatamodeld in Sources */,
+				65C04D451BA5B0D80072AC48 /* PersistNSMOExtensionsTests.swift in Sources */,
+				65C04D431BA5B0D80072AC48 /* PersistStoreBasedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65C04D501BA5B4580072AC48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C04D5F1BA5B4670072AC48 /* Persist+SavingExtensions.swift in Sources */,
+				65C04D601BA5B4670072AC48 /* NSManagedObject+Helpers.swift in Sources */,
+				65C04D611BA5B4670072AC48 /* Internal.swift in Sources */,
+				65C04D5E1BA5B4670072AC48 /* Persist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1AA1BA5672B00AF94FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651860711BA56DD10079B39F /* Internal.swift in Sources */,
+				6518607C1BA57FA60079B39F /* NSManagedObject+Helpers.swift in Sources */,
+				65C04D101BA5A94C0072AC48 /* Persist+SavingExtensions.swift in Sources */,
+				65E7F1CA1BA5673300AF94FE /* Persist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E7F1B51BA5672B00AF94FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E7F1BF1BA5672B00AF94FE /* PersistStoreBasedTests.swift in Sources */,
+				65E7F44B1BA585630038C449 /* Helpers.swift in Sources */,
+				651860761BA578F00079B39F /* SimpleModel.xcdatamodeld in Sources */,
+				6518607A1BA579B00079B39F /* Person.swift in Sources */,
+				651860791BA579B00079B39F /* Person+CoreDataProperties.swift in Sources */,
+				65E7F4491BA585430038C449 /* PersistNSMOExtensionsTests.swift in Sources */,
+				65E7F4471BA5852E0038C449 /* PersistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65C04D381BA5B0910072AC48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65C04D2B1BA5B0900072AC48 /* Persist-OSX */;
+			targetProxy = 65C04D371BA5B0910072AC48 /* PBXContainerItemProxy */;
+		};
+		65E7F1BC1BA5672B00AF94FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65E7F1AE1BA5672B00AF94FE /* Persist */;
+			targetProxy = 65E7F1BB1BA5672B00AF94FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		65C04D3E1BA5B0910072AC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D171BA5AEFC0072AC48 /* OSX Framework.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Persist/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Persist-OSX";
+				PRODUCT_NAME = Persist;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		65C04D3F1BA5B0910072AC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D171BA5AEFC0072AC48 /* OSX Framework.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Persist/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Persist-OSX";
+				PRODUCT_NAME = Persist;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		65C04D411BA5B0910072AC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D181BA5AEFC0072AC48 /* OSX Tests.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PersistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Persist-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		65C04D421BA5B0910072AC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D181BA5AEFC0072AC48 /* OSX Tests.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PersistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Persist-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		65C04D5B1BA5B4580072AC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Persist/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Persist-watchOS";
+				PRODUCT_NAME = Persist;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		65C04D5C1BA5B4580072AC48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Persist/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Persist-watchOS";
+				PRODUCT_NAME = Persist;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		65E7F1C11BA5672B00AF94FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D131BA5AEFC0072AC48 /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		65E7F1C21BA5672B00AF94FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D191BA5AEFC0072AC48 /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		65E7F1C41BA5672B00AF94FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D141BA5AEFC0072AC48 /* iOS Framework.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Persist/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.Persist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		65E7F1C51BA5672B00AF94FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D141BA5AEFC0072AC48 /* iOS Framework.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Persist/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.Persist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		65E7F1C71BA5672B00AF94FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D161BA5AEFC0072AC48 /* iOS Tests.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = PersistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.PersistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65E7F1C81BA5672B00AF94FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D161BA5AEFC0072AC48 /* iOS Tests.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = PersistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.PersistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65C04D3D1BA5B0910072AC48 /* Build configuration list for PBXNativeTarget "Persist-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C04D3E1BA5B0910072AC48 /* Debug */,
+				65C04D3F1BA5B0910072AC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C04D401BA5B0910072AC48 /* Build configuration list for PBXNativeTarget "Persist-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C04D411BA5B0910072AC48 /* Debug */,
+				65C04D421BA5B0910072AC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C04D5A1BA5B4580072AC48 /* Build configuration list for PBXNativeTarget "Persist-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C04D5B1BA5B4580072AC48 /* Debug */,
+				65C04D5C1BA5B4580072AC48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E7F1A91BA5672B00AF94FE /* Build configuration list for PBXProject "Persist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7F1C11BA5672B00AF94FE /* Debug */,
+				65E7F1C21BA5672B00AF94FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E7F1C31BA5672B00AF94FE /* Build configuration list for PBXNativeTarget "Persist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7F1C41BA5672B00AF94FE /* Debug */,
+				65E7F1C51BA5672B00AF94FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E7F1C61BA5672B00AF94FE /* Build configuration list for PBXNativeTarget "PersistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E7F1C71BA5672B00AF94FE /* Debug */,
+				65E7F1C81BA5672B00AF94FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		651860741BA578F00079B39F /* SimpleModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				651860751BA578F00079B39F /* SimpleModel.xcdatamodel */,
+			);
+			currentVersion = 651860751BA578F00079B39F /* SimpleModel.xcdatamodel */;
+			path = SimpleModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 65E7F1A61BA5672B00AF94FE /* Project object */;
+}
