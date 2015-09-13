@@ -93,7 +93,7 @@ implementation of `static func entityName() -> String`.
 Issues and feature requests are welcome, although the intention is to keep Latch lightweight.
 
 ### Submitting Pull Requests
-1. Fork it ( http://github.com/DanielTomlinson/Latch/fork )
+1. Fork it ( https://github.com/DanielTomlinson/Persist/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
