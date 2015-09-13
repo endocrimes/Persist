@@ -12,6 +12,7 @@ Persist uses a simple parent/child Core Data stack, with a private writer
 context attached directly to the NSPersistentStoreCoordinator, with a main
 queue context that is exposed to the user as it's child.
 
+```
    ┌─────────────────────────────────────────────────────────────────────────┐
    │ ┌─────────────────────────────────┐                                     │
    │ │  Persistent Store Coordinator   │                                     │
@@ -35,6 +36,7 @@ queue context that is exposed to the user as it's child.
    │ │ Temporary Private Queue Context ◀─────────┤     Writes/Updates     │  │
    │ └─────────────────────────────────┘         └────────────────────────┘  │
    └─────────────────────────────────────────────────────────────────────────┘
+```
 
 ## Usage
 
