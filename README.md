@@ -90,7 +90,7 @@ implementation of `static func entityName() -> String`.
 ## Contributing
 
 ### Issues
-Issues and feature requests are welcome, although the intention is to keep Latch lightweight.
+Issues and feature requests are welcome, although the intention is to keep Persist lightweight.
 
 ### Submitting Pull Requests
 1. Fork it ( https://github.com/endocrimes/Persist/fork )
