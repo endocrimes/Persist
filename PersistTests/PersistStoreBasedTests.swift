@@ -19,9 +19,8 @@ class PersistBaseTests: XCTestCase {
     
     func modelURL() -> NSURL {
         let bundle = NSBundle(forClass: self.dynamicType)
-        let modelPath = bundle.pathForResource("SimpleModel", ofType: "momd")!
-        let modelURL = NSURL(fileURLWithPath: modelPath)
-        
+        let modelURL = bundle.URLForResource("SimpleModel", withExtension: "momd")!
+
         return modelURL
     }
     
