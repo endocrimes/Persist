@@ -51,7 +51,7 @@ class PersistBaseTests: XCTestCase {
     func test_can_insert_object_into_context() {
         let context = sut.managedObjectContext
         
-        let person = try! Person.create(inContext: context)
+        let person = Person.create(inContext: context)
         person?.name = "Henri"
         person?.birthday = NSDate()
         
