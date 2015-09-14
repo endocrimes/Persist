@@ -587,6 +587,7 @@
 		};
 		65C04D5B1BA5B4580072AC48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D1C1BA5AEFC0072AC48 /* watchOS Framework.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -606,6 +607,7 @@
 		};
 		65C04D5C1BA5B4580072AC48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C04D1C1BA5AEFC0072AC48 /* watchOS Framework.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
