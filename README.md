@@ -2,15 +2,15 @@
 
 Persist is a simple, reusable Core Data stack written in Swift.
 It also provides some lightweight helpers for common actions such as creating
-entities, and querying.
+entities and querying.
 
 It supports iOS 8+, watchOS 2.0, and Mac OS 10.9+.
 
-## Architecture
+## Architecture
 
 Persist uses a simple parent/child Core Data stack, with a private writer
 context attached directly to the NSPersistentStoreCoordinator, with a main
-queue context that is exposed to the user as it's child.
+queue context that is exposed to the user as its child.
 
 ```
    ┌─────────────────────────────────────────────────────────────────────────┐
@@ -42,11 +42,11 @@ queue context that is exposed to the user as it's child.
 
 ### Stack setup
 
-Persist gives you full access to the configuration of it's underlying stores
-via the StoreType enum, providing safe construction of InMemory, SQLite, and
-Binary store types, and allows you to also provide a custom store type.
+Persist gives you full access to the configuration of its underlying stores
+via the `StoreType` enum, providing safe construction of in-memory, sqlite, and
+binary store types, and allows you to also provide a custom store type.
 
-Creating an in memory store would look like this:
+Creating an in-memory store would look like this:
 
 ```swift
 import Persist
