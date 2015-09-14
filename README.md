@@ -43,8 +43,8 @@ queue context that is exposed to the user as its child.
 ### Stack setup
 
 Persist gives you full access to the configuration of its underlying stores
-via the `StoreType` enum, providing safe construction of in-memory, sqlite, and
-binary store types, and allows you to also provide a custom store type.
+via the `StoreType` enum, providing safe construction of InMemory, SQLite, and
+Binary store types, and allows you to also provide a custom store type.
 
 Creating an in-memory store would look like this:
 
