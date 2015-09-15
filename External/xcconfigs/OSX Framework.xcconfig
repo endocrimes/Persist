@@ -1,0 +1,32 @@
+#include "Warnings.xcconfig"
+
+// Architectures
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+VALID_ARCHS = i386 x86_64
+
+// Build Options
+APPLICATION_EXTENSION_API_ONLY = YES
+
+// Deployment
+COMBINE_HIDPI_IMAGES = YES
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
+SKIP_INSTALL = YES
+
+// Versioning
+VERSIONING_SYSTEM = apple-generic
+
+// Linking
+DYLIB_INSTALL_NAME_BASE = @rpath
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks
+
+// Packaging 
+DEFINES_MODULE = YES
+FRAMEWORK_VERSION = A
+INFOPLIST_FILE  = $(PRODUCT_NAME)/Info.plist
+
+// Preprocessing
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) FRAMEWORK=1
+
+// Custom Compiler Flags
+WARNING_CFLAGS = $(inherited) -Wno-missing-variable-declarations

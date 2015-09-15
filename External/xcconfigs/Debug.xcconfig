@@ -1,0 +1,40 @@
+#include "Shared.xcconfig"
+
+// Architectures
+ONLY_ACTIVE_ARCH = YES
+
+// Build Locations
+CONFIGURATION_BUILD_DIR = $(BUILD_DIR)/Debug$(EFFECTIVE_PLATFORM_NAME)
+CONFIGURATION_TEMP_DIR = $(PROJECT_TEMP_DIR)/Debug$(EFFECTIVE_PLATFORM_NAME)
+
+// Build Options
+ENABLE_TESTABILITY = YES
+VALIDATE_PRODUCT = NO
+
+// Deployment
+COPY_PHASE_STRIP = NO
+DEPLOYMENT_POSTPROCESSING = NO
+SEPARATE_STRIP = NO
+
+// Code Generation
+GCC_OPTIMIZATION_LEVEL = 0
+
+// Code Signing
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer
+CODE_SIGN_IDENTITY[sdk=macosx*] = Mac Developer
+
+// LLVM
+ENABLE_NS_ASSERTIONS = YES
+
+// Swift Compiler - Code Generation
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+
+// Swift Compiler - Custom Flags
+OTHER_SWIFT_FLAGS = -D DEBUG
+
+// User Defined 
+METAL_ENABLE_DEBUG_INFO = YES
+MTL_ENABLE_DEBUG_INFO = YES
+
+// Preprocessing
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1

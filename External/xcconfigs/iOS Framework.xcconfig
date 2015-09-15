@@ -1,0 +1,29 @@
+#include "Warnings.xcconfig"
+
+// Architectures
+SDKROOT = iphoneos
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+VALID_ARCHS = arm64 armv7 armv7s
+
+// Build Options
+APPLICATION_EXTENSION_API_ONLY = YES
+
+// Deployment
+INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
+SKIP_INSTALL = YES
+
+// Versioning
+VERSIONING_SYSTEM = apple-generic
+
+// Linking
+DYLIB_INSTALL_NAME_BASE = @rpath
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+// Packaging
+INFOPLIST_FILE  = $(PRODUCT_NAME)/Info.plist
+DEFINES_MODULE = YES
+
+// Preprocessing
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) FRAMEWORK=1
+
+WARNING_CFLAGS = $(inherited) -Wno-missing-variable-declarations

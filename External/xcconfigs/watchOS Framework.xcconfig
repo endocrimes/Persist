@@ -1,0 +1,6 @@
+#include "iOS Framework.xcconfig"
+
+// Architectures
+SDKROOT = watchos
+SUPPORTED_PLATFORMS = watchos watchsimulator
+VALID_ARCHS = armv7k

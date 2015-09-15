@@ -1,0 +1,37 @@
+#include "Shared.xcconfig"
+
+// Architectures
+ONLY_ACTIVE_ARCH = NO
+
+// Build Locations
+CONFIGURATION_BUILD_DIR = $(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)
+CONFIGURATION_TEMP_DIR = $(PROJECT_TEMP_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)
+
+// Build Options
+VALIDATE_PRODUCT = YES
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// Deployment
+COPY_PHASE_STRIP = YES
+DEPLOYMENT_POSTPROCESSING = YES
+SEPARATE_STRIP = YES
+
+// Code Generation
+GCC_OPTIMIZATION_LEVEL = s
+
+// Code Signing
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Distribution
+CODE_SIGN_IDENTITY[sdk=macosx*] = Mac Distribution
+
+// Deployment
+COPY_PHASE_STRIP = YES
+
+// LLVM
+ENABLE_NS_ASSERTIONS = NO
+
+// Swift Compiler - Custom Flags
+OTHER_SWIFT_FLAGS = -D RELEASE
+
+// User Defined 
+METAL_ENABLE_DEBUG_INFO = NO
+MTL_ENABLE_DEBUG_INFO = NO

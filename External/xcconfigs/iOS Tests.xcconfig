@@ -1,0 +1,16 @@
+// Architectures
+SDKROOT = iphoneos
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+VALID_ARCHS = arm64 armv7 armv7s
+
+// Linking
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+OTHER_LDFLAGS = $(inherited) -framework XCTest -ObjC
+WARNING_CFLAGS = $(inherited) -Wno-gnu -Wno-variadic-macros -Wno-auto-import -Wno-objc-interface-ivars -Wno-incomplete-module -Wno-documentation-unknown-command -Wno-reserved-id-macro
+
+// Packaging
+INFOPLIST_FILE  = $(PRODUCT_NAME)/Info.plist
+WRAPPER_EXTENSION = xctest
+
+// Search Paths
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(DEVELOPER_FRAMEWORKS_DIR)

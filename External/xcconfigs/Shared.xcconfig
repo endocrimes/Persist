@@ -1,0 +1,24 @@
+#include "Warnings.xcconfig"
+
+// Architectures
+SDKROOT = iphoneos
+
+
+// Deployment
+TARGETED_DEVICE_FAMILY = 1,2
+
+// Packaging
+PRODUCT_NAME = $(TARGET_NAME)
+
+// Search Paths
+ALWAYS_SEARCH_USER_PATHS = NO
+
+// LLVM
+CLANG_ENABLE_MODULES = YES
+CLANG_ENABLE_OBJC_ARC = YES
+
+// Code Generation
+GCC_NO_COMMON_BLOCKS = YES
+
+// Preprocessing
+ENABLE_STRICT_OBJC_MSGSEND = YES
