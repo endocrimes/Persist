@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                       = "Persist"
-  s.version                    = "1.0.0"
+  s.version                    = "2.0.0"
   s.summary                    = "A simple Swift 2.0 Core Data stack using parent/child contexts"
   s.description                = <<-DESC
                                  Persist is a simple, reusable Core Data stack written in Swift.
