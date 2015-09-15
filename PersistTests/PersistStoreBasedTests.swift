@@ -51,8 +51,8 @@ class PersistBaseTests: XCTestCase {
         let context = sut.managedObjectContext
         
         let person = Person.create(inContext: context)
-        person?.name = "Henri"
-        person?.birthday = NSDate()
+        person.name = "Henri"
+        person.birthday = NSDate()
         
         do {
             try context.save()
