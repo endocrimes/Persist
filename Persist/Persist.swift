@@ -37,6 +37,14 @@ public enum StoreType {
 }
 
 /**
+Errors that can be thrown by Persist.
+*/
+public enum PersistErrors: ErrorType {
+    case ManagedObjectModelInitializationFailed
+    case PersistentStoreInitializationFailed
+}
+
+/**
 Persist provides a lightweight abstraction around a Core Data Stack.
 */
 public class Persist {
@@ -55,17 +63,17 @@ public class Persist {
     
     - throws: Propogates Core Data errors back to the Callee
     */
-    public init?(storeType: StoreType, modelURL: NSURL) throws {
+    public init(storeType: StoreType, modelURL: NSURL) throws {
         guard let mom = NSManagedObjectModel(contentsOfURL: modelURL) else {
-            return nil
+            throw PersistErrors.ManagedObjectModelInitializationFailed
         }
         
         state.persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: mom)
         
-        state.persistentStore = try setupCoreDataStore(withStoreType: storeType, persistentStoreCoordinator: state.persistentStoreCoordinator!)
+        state.persistentStore = try? setupCoreDataStore(withStoreType: storeType, persistentStoreCoordinator: state.persistentStoreCoordinator!)
         
         guard state.persistentStore != nil else {
-            return nil
+            throw PersistErrors.PersistentStoreInitializationFailed
         }
     }
 }
