@@ -33,7 +33,7 @@ struct State {
     }()
 }
 
-func setupCoreDataStore(withStoreType storeType: StoreType, persistentStoreCoordinator: NSPersistentStoreCoordinator) throws -> NSPersistentStore? {
+func setupCoreDataStore(withStoreType storeType: StoreType, persistentStoreCoordinator: NSPersistentStoreCoordinator) throws -> NSPersistentStore {
     switch storeType {
     case .InMemory:
         return try setupPersistentStore(NSInMemoryStoreType, coordinator: persistentStoreCoordinator)
@@ -47,7 +47,7 @@ func setupCoreDataStore(withStoreType storeType: StoreType, persistentStoreCoord
     }
 }
 
-private func setupPersistentStore(storeType: String, coordinator: NSPersistentStoreCoordinator, configuration: String? = nil, URL: NSURL? = nil, options: [ String : AnyObject ]? = nil) throws -> NSPersistentStore? {
+private func setupPersistentStore(storeType: String, coordinator: NSPersistentStoreCoordinator, configuration: String? = nil, URL: NSURL? = nil, options: [ String : AnyObject ]? = nil) throws -> NSPersistentStore {
     let ps = try coordinator.addPersistentStoreWithType(storeType, configuration: configuration, URL: URL, options: options)
     
     return ps
