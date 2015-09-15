@@ -26,11 +26,11 @@ public protocol ManagedObjectType : class {
     /**
     Create a new instance of the model object in the given context.
     
-    - parameter context: The NSManagedObjectContext to create the object in.
+    - parameter context: The NSManagedObjectContext in which to create the object.
     
-    - returns: A new instance of the model. If the result is nil, then there is an error in your configuration.
+    - returns: A new instance of the model.
     */
-    static func create(inContext context: NSManagedObjectContext) -> T?
+    static func create(inContext context: NSManagedObjectContext) -> T
     
     /**
     Create a new fetch request for the entity.
@@ -49,9 +49,11 @@ extension ManagedObjectType where Self: NSManagedObject {
         return NSStringFromClass(self)
     }
     
-    public static func create(inContext context: NSManagedObjectContext) -> Self? {
-        let object = NSEntityDescription.insertNewObjectForEntityForName(entityName(), inManagedObjectContext: context) as? Self
-        
+    public static func create(inContext context: NSManagedObjectContext) -> Self {
+        guard let object = NSEntityDescription.insertNewObjectForEntityForName(entityName(), inManagedObjectContext: context) as? Self else {
+            preconditionFailure("Could not find entity named \(entityName()) in context \(context)")
+        }
+
         return object
     }
     
@@ -64,7 +66,6 @@ extension ManagedObjectType where Self: NSManagedObject {
         fetchRequest.predicate = predicate
         
         let result = try context.executeFetchRequest(fetchRequest)
-        
         return result as? [Self] ?? []
     }
 }
