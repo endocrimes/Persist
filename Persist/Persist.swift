@@ -56,7 +56,7 @@ public class Persist {
     }
     
     /**
-    Create a new instance of Persist.
+    Create a new instance of Persist with a specified managedObjectModel URL.
     
     - parameter storeType: Provide a StoreType for use in the NSPersistentStore
     - parameter modelURL:  Provide a URL to the desired NSManagedObjectModel
@@ -65,6 +65,28 @@ public class Persist {
     */
     public init(storeType: StoreType, modelURL: NSURL) throws {
         guard let mom = NSManagedObjectModel(contentsOfURL: modelURL) else {
+            throw PersistErrors.ManagedObjectModelInitializationFailed
+        }
+        
+        state.persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: mom)
+        
+        state.persistentStore = try? setupCoreDataStore(withStoreType: storeType, persistentStoreCoordinator: state.persistentStoreCoordinator!)
+        
+        guard state.persistentStore != nil else {
+            throw PersistErrors.PersistentStoreInitializationFailed
+        }
+    }
+    
+    /**
+    Create a new instance of Persist with a managedObjectModel merged from the
+    provided bundles.
+    
+    - parameter storeType: Provide a StoreType for use in the NSPersistentStore
+    
+    - throws: Propogates Core Data errors back to the Callee
+    */
+    public init(storeType: StoreType, bundles: [NSBundle]?) throws {
+        guard let mom = NSManagedObjectModel.mergedModelFromBundles(bundles) else {
             throw PersistErrors.ManagedObjectModelInitializationFailed
         }
         
