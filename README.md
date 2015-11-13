@@ -1,4 +1,5 @@
 # Persist
+[![Build Status](https://travis-ci.org/endocrimes/Persist.svg?branch=master)](https://travis-ci.org/endocrimes/Persist)
 
 Persist is a simple, reusable Core Data stack written in Swift.
 It also provides some lightweight helpers for common actions such as creating
