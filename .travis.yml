@@ -2,4 +2,4 @@ language: objective-c
 before_install:
       - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
-      - xcodebuild -project Persist.xcodeproj -scheme Persist test | xcpretty -c
+    - xcodebuild -project Persist.xcodeproj -scheme Persist-OSX test | xcpretty -c
