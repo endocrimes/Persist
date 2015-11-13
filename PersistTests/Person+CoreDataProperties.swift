@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.swift
 //  Persist
 //
-//  Created by  Danielle Lancashireon 13/09/2015.
+//  Created by Danielle Lancashire on 13/09/2015.
 //  Copyright © 2015 Danielle Lancashire. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
