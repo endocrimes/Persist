@@ -16,8 +16,6 @@ Default implementations are provided, but they can be overriden by individual cl
 To opt into these methods, add the ManagedObjectType protocol to your NSManagedObject subclass.
 */
 public protocol ManagedObjectType : class {
-    typealias T = Self
-    
     /**
     The name of the class in the managed object model.
     */
@@ -30,7 +28,7 @@ public protocol ManagedObjectType : class {
     
     - returns: A new instance of the model.
     */
-    static func create(inContext context: NSManagedObjectContext) -> T
+    static func create(inContext context: NSManagedObjectContext) -> Self
     
     /**
     Create a new fetch request for the entity.
@@ -41,7 +39,7 @@ public protocol ManagedObjectType : class {
     Create and execute a fetch request with the given predicate to return all
     matching records of the entity.
     */
-    static func findAllMatchingPredicate(predicate: NSPredicate, inContext: NSManagedObjectContext) throws -> [T]
+    static func findAllMatchingPredicate(predicate: NSPredicate, inContext: NSManagedObjectContext) throws -> [Self]
 }
 
 extension ManagedObjectType where Self: NSManagedObject {
